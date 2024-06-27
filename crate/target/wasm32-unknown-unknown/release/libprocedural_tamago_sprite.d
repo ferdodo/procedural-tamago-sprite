@@ -1,1 +1,0 @@
-/home/runner/work/procedural-tamago-sprite/procedural-tamago-sprite/crate/target/wasm32-unknown-unknown/release/libprocedural_tamago_sprite.rlib: /home/runner/work/procedural-tamago-sprite/procedural-tamago-sprite/crate/src/lib.rs

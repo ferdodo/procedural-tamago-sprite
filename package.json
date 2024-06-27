@@ -1,0 +1,19 @@
+{
+  "name": "procedural_tamago_sprite",
+  "collaborators": [
+    "Thomas Riffard"
+  ],
+  "description": "Procedural generation of tamago sprites",
+  "version": "0.1.0",
+  "license": "MIT",
+  "files": [
+    "procedural_tamago_sprite_bg.wasm",
+    "procedural_tamago_sprite.js",
+    "procedural_tamago_sprite.d.ts"
+  ],
+  "module": "procedural_tamago_sprite.js",
+  "types": "procedural_tamago_sprite.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
