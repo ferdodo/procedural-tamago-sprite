@@ -1,0 +1,16 @@
+[package]
+name = "procedural_tamago_sprite"
+version = "0.1.0"
+edition = "2021"
+authors = ["Thomas Riffard"]
+description = "Procedural generation of tamago sprites"
+license = "MIT"
+
+[lib]
+name = "procedural_tamago_sprite"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+sprite-gen = "0.2"
+wasm-bindgen = "0.2.92"
+serde = { version = "1.0.203", features = ["derive"] }

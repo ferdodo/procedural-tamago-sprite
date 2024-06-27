@@ -1,0 +1,1 @@
+/home/runner/work/procedural-tamago-sprite/procedural-tamago-sprite/crate/target/debug/libprocedural_tamago_sprite.so: /home/runner/work/procedural-tamago-sprite/procedural-tamago-sprite/crate/src/lib.rs
