@@ -1,7 +1,7 @@
 {
 	"name": "demo",
 	"scripts": {
-		"build": "cp -r ../crate/pkg public/pkg && vite build",
+		"build": "mkdir -p public && cp -r ../crate/pkg/* public && vite build",
 		"start": "vite --host"
 	},
 	"devDependencies": {

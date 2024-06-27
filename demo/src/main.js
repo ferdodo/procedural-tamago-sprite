@@ -1,5 +1,5 @@
 import "crumbs-design-system";
-import init, { generatetamago } from "../public/pkg/procedural_tamago_sprite";
+import init, { generatetamago } from "../public/procedural_tamago_sprite";
 
 function generateImageFromHexString(buffer, width) {
   if (buffer.length % 8 !== 0) {
