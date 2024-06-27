@@ -1,0 +1,48 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛎️  Checkout 
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: current
+
+      - name: Install wasm-pack
+        run: cargo install wasm-pack
+
+      - name: Build crate
+        working-directory: ./crate
+        run: cargo build
+
+      - name: Generate js bindings
+        working-directory: ./crate
+        run: wasm-pack build --target web
+
+      - name: Install js deps
+        working-directory: ./demo
+        run: npm install
+
+      - name: Audit
+        working-directory: ./demo
+        run: npm audit --audit-level=low
+
+      - name: Build demo
+        working-directory: ./demo
+        run: npm run build
+
+      - name: 🚀 Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./demo/dist

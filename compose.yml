@@ -1,0 +1,10 @@
+services:
+  crate:
+    build: crate
+
+  demo:
+    build: demo
+    depends_on:
+      - crate
+    ports:
+      - 4634:5173

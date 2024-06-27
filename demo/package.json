@@ -1,0 +1,11 @@
+{
+	"name": "demo",
+	"scripts": {
+		"build": "cp -r ../crate/pkg public/pkg && vite build",
+		"start": "vite --host"
+	},
+	"devDependencies": {
+		"crumbs-design-system": "^1.0.0",
+		"vite": "^5.3.1"
+	}
+}
